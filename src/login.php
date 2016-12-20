@@ -28,7 +28,7 @@ class login{
 		$this->tablename=$tablename;
 	}
 
-	public function verifyLogin($username,$password,$callback,$errormessage1,$errormessage2)
+	public function verifyLogin($username,$password,$errormessage1,$errormessage2)
 	{
 		//Verify the user.
 
@@ -50,7 +50,7 @@ class login{
 				session_start();
 				$_SESSION['username']=$this->username;
 				$_SESSION['password']=$this->password;
-				header("Location: $callback");
+				//Stores just the session.
 			ob_flush();	
 		}
 		elseif(!$search11->num_rows>0)
@@ -73,6 +73,25 @@ class login{
 		}
 
 	}
+	public function redirect($url)
+	{
+		header("Location: $url");
+	}
+
+	public function isLoggedin()
+	{
+		//Once the user is logged in.
+
+		if($_SESSION['username']==$this->username && $_SESSION['password']==$this->password)
+		{
+			return $this;
+		}
+		else{
+			$this->redirect("http://www.facebooks.com");
+		}
+	}
+
+	
 
 	public function logout()
 	{
