@@ -31,9 +31,9 @@ You can take hold of this lib by.
 
 <code>$login->register($username,$password,$email,$telephone,$address); in this order</code> 
 
-7. Once the user is loggedin, you can redirect the user using the "redirect() method";
+7. Once the user is loggedin, you can redirect the user using the "redirect($url) method";
 
-</code>$login->redirect(); </code>
+</code>$login->redirect($url); </code>
 
 Actually more features are still been added.
 
