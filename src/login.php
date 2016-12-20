@@ -23,12 +23,21 @@ class login{
 	protected $errormessage1;
 	protected $errormessage2;
 
+	/**
+	* @param requires the connect and table Name.
+	*
+	**/
 	public function __construct($connect,$tablename)
 	{
 		//Empty Shit.
 		$this->connect=$connect;
 		$this->tablename=$tablename;
 	}
+
+	/**
+	* @param needs the username, password, error message to display
+	* Error message can be encapsulated into HTML codes.
+	**/
 
 	public function verifyLogin($username,$password,$errormessage1,$errormessage2)
 	{
