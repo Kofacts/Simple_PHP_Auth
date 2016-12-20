@@ -1,0 +1,14 @@
+{
+    "name": "auth_helper/auth_helper",
+    "description": "A Simple Authentication Helper with A Slight Simple Blueprint",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Obodugo Rapheal",
+            "email": "obodugorapheal@gmail.com"
+        }
+    ],
+    "minimum-stability": "RC",
+    "require": {}
+}
