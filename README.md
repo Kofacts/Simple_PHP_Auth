@@ -5,6 +5,7 @@ I Basically use it for simple login/Register and stuffs like that.
 # How to Use
 
 You can take hold of this lib by.
+
 1. Starting up your terminal and punching
 
 <code>$ git clone https://github.com/Kofacts/Simple_PHP_Auth.git </code>
