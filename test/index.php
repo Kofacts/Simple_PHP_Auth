@@ -1,4 +1,5 @@
 <?php
+	use Auth\login as l;
 	include "../src/login.php";
 	try
 	{
@@ -12,8 +13,18 @@
 		else{
 			if(isset($_POST['submit']))
 			{
-				$login= new login($connect,"user_details");
-				$login->verifyLogin($_POST['username'],$_POST['password'],"http://facebook.com","Failed Login","Error");
+				$login= new l\login($connect,"user_details");
+				//Logs the user in first.
+				$login->verifyLogin($_POST['username'],$_POST['password'],"Failed Login","Error");
+
+				if($login->isLoggedin()==TRUE)
+				{
+					//Checks when the user is loggedin in..
+					var_dump("hello");
+				}
+				else{
+					$login->redirect("http://scholarsjoint.com");
+				}
 				//$login::guest();
 			}
 		}

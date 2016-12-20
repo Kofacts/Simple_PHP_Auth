@@ -33,7 +33,7 @@ You can take hold of this lib by.
 
 7. Once the user is loggedin, you can redirect the user using the "redirect($url) method";
 
-</code>$login->redirect($url); </code>
+</code>$login->redirect($url);</code>
 
 Actually more features are still been added.
 
