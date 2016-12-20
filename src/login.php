@@ -1,4 +1,6 @@
 <?php
+//implenting Namespace.
+namespace Auth\login;
 
 /**
 	Project Name: Simple Login and Register Lib.
@@ -35,7 +37,7 @@ class login{
 		//Check the db first.
 		$this->username=$username;
 		$this->password=$password;
-		$this->callback-$callback;
+		//$this->callback=$callback;
 		$username1=$this->username;
 		$password1=$this->password;
 		$search1="SELECT * FROM $this->tablename WHERE username='$username1' AND password='$password1'";
@@ -84,10 +86,10 @@ class login{
 
 		if($_SESSION['username']==$this->username && $_SESSION['password']==$this->password)
 		{
-			return $this;
+			return true;
 		}
 		else{
-			$this->redirect("http://www.facebooks.com");
+			return false;
 		}
 	}
 
