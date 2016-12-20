@@ -6,6 +6,7 @@ I Basically use it for simple login/Register and stuffs like that.
 
 You can take hold of this lib by.
 1. Starting up your terminal and punching
+
 <code>$ git clone https://github.com/Kofacts/Simple_PHP_Auth.git </code>
 
 2. Having done that, the package would be installed in a folder named "Simple_PHP_Auth"
