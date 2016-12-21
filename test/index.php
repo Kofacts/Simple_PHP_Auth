@@ -1,6 +1,8 @@
 <?php
 	use Auth\login as l;
-	include "../src/login.php";
+	use Auth\dets as details;
+	require_once "../src/login.php";
+	require_once "../src/Auth.php";
 	try
 	{
 		$connect= new mysqli("localhost","root","pico4421","loginlib");
@@ -20,7 +22,8 @@
 				if($login->isLoggedin()==TRUE)
 				{
 					//Checks when the user is loggedin in..
-					var_dump("hello");
+					$auth= new details\Auth();
+					$auth::guest();
 				}
 				else{
 					$login->redirect("http://scholarsjoint.com");

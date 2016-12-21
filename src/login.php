@@ -36,7 +36,7 @@ class login{
 
 	/**
 	* @param needs the username, password, error message to display
-	* Error message can be encapsulated into HTML codes.
+	* Error message can be encapsulated into HTML codes.   
 	**/
 
 	public function verifyLogin($username,$password,$errormessage1,$errormessage2)
